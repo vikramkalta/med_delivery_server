@@ -1,0 +1,7 @@
+CREATE TABLE Products (
+    ProductID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(50) NOT NULL,
+    ProductPrice INT NOT NULL,
+    Category VARCHAR(50) NULL
+--    CreatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
