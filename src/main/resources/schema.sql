@@ -3,5 +3,21 @@ CREATE TABLE Products (
     ProductName VARCHAR(50) NOT NULL,
     ProductPrice INT NOT NULL,
     Category VARCHAR(50) NULL
---    CreatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Address (
+    AddressID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    ContactName VARCHAR(50) NOT NULL,
+    ContactNumber VARCHAR(10) NOT NULL,
+    Pincode VARCHAR(6) NULL,
+    StreetAddress VARCHAR(100) NULL,
+    City VARCHAR(50) NULL,
+    State VARCHAR(50) NULL
+);
+
+CREATE TABLE CartProduct (
+    CartProductID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    AddressID BIGINT NOT NULL,
+    ProductID BIGINT NOT NULL,
+    Quantity INT NOT NULL
 );
